@@ -1,29 +1,14 @@
 package practice;
 
-import java.util.Arrays;
-
 public class Student {
-    private String firstname;
-    private String lastname;
-    private String surname;
-    private int age;
+    private final String firstname;
+    private final String lastname;
+    private final String surname;
+    private final int age;
     private int[] grade;
     private String[] subject;
-
-    public void setGrade(int[] grade) {
-        this.grade = grade;
-    }
-
-    public void setSubject(String[] subject) {
-        this.subject = subject;
-    }
-
-    public Student(String lastname, String firstname, String surname, int age) {
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.surname = surname;
-        this.age = age;
-    }
+    int index;
+    static int counter;
 
     public int getAge() {
         return age;
@@ -38,6 +23,18 @@ public class Student {
     }
 
     public Student(String lastname, String firstname, String surname, int age, int[] grade, String[] subject) {
+        this.index = counter;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.surname = surname;
+        this.age = age;
+        this.grade = grade;
+        this.subject = subject;
+        counter++;
+    }
+
+    public Student(int index, String lastname, String firstname, String surname, int age, int[] grade, String[] subject) {
+        this.index = index;
         this.firstname = firstname;
         this.lastname = lastname;
         this.surname = surname;
@@ -60,13 +57,24 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
-                ", surname='" + surname + '\'' +
-                ", age=" + age +
-                ", grade=" + Arrays.toString(grade) +
-                ", subject=" + Arrays.toString(subject) +
-                '}';
+        return
+                index +
+                        ". " + lastname +
+                        " " + firstname +
+                        " " + surname +
+                        ", возраст=" + age +
+                        ", предмет и оценка:" + outGradeAndSubject() +
+                        "\n";
+    }
+
+    private String outGradeAndSubject() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < grade.length; i++) {
+            sb.append("\n");
+            sb.append(subject[i]);
+            sb.append(" - ");
+            sb.append(grade[i]);
+        }
+        return sb.toString();
     }
 }

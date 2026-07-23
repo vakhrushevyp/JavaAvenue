@@ -13,12 +13,6 @@ public class Main {
      * Добавить функцию подсчёта среднего балла среди всех студентов.
      */
     public static void main(String[] args) {
-
         new Controller().mainMenu();
-
-
     }
-
-
-
 }
