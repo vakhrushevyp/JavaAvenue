@@ -51,6 +51,34 @@ public class CheapTripController {
         } else {
             System.out.println("Увы, нет такого фильтра");
         }
+
+//        switch (userChoice) {
+//            case 1:{
+//                System.out.println("Куда вы хотите полететь?");
+//                String country = scanner.nextLine();
+//                db.searchByCountry(country);
+//                break;
+//            }
+//
+//            case 2:{
+//                System.out.println("В какой город хотите?");
+//                String city = scanner.nextLine();
+//                db.searchByCity(city);
+//                break;
+//            }
+//
+//            case 4: {
+//                System.out.println("В какой городl хотите?");
+//                String city = scanner.nextLine();
+//                db.searchByCity(city);
+//                break;
+//            }
+//
+//            default:
+//                System.out.println("Увы, нет такого фильтра");
+//        }
+
+
     }
 
     private static void printMenu() {
