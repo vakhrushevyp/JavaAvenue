@@ -17,6 +17,7 @@ public class Main {
         int number2 = (int) number1;
         System.out.println(number2);
 
+
         int[] array = {1, 5, 7, 3, 4};
         ArrayList<Integer> list = new ArrayList<>();
         for (int value : array) {

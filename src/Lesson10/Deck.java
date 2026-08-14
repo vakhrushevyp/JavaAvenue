@@ -2,9 +2,11 @@ package Lesson10;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 
 public class Deck {
     private final ArrayList<Card> cards = new ArrayList<>();
+    private Random random = new Random();
 
     public void refreshDeck() {
         cards.clear();
@@ -73,10 +75,11 @@ public class Deck {
         cards.add(new Card(11, "Туза бубна"));
         cards.add(new Card(11, "Туза пика"));
         cards.add(new Card(11, "Туза черви"));
+
+        Collections.shuffle(cards); //Возможно будет целесообразно смешивание карт перенести в метод refreshDeck
     }
 
     public Card getRandomCard() {
-        Collections.shuffle(cards); //Возможно будет целесообразно смешивание карт перенести в метод refreshDeck
         Card card = cards.getFirst();
         cards.removeFirst();
         return card;
