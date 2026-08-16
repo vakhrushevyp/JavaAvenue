@@ -1,4 +1,4 @@
-package Lesson10;
+package lesson10;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -22,6 +22,7 @@ public class Player {
 
     /**
      * Положить карту в руку
+     *
      * @param card карта
      */
     public void addCardToHand(Card card) {
@@ -31,10 +32,10 @@ public class Player {
     public boolean isNeedNextCard() {
         int points = countPoints();
         if (points > 21) {
-            System.out.println(name +", у вас " + points + " очков. Вы проиграли!");
+            System.out.println(name + ", у вас " + points + " очков. Вы проиграли!");
             return false;
         }
-        System.out.println("\n"+ name +", хотите ли вы взять еще карту?");
+        System.out.println("\n" + name + ", хотите ли вы взять еще карту?");
         System.out.println("Карты у вас на руках:");
         for (Card card : hand) {
             System.out.println(card);
@@ -45,7 +46,7 @@ public class Player {
         return input.equalsIgnoreCase("да");
     }
 
-    public int countPoints(){
+    public int countPoints() {
         int points = 0;
         for (Card card : hand) {
             points += card.getNominal();

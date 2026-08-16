@@ -1,4 +1,4 @@
-package Lesson10;
+package lesson10;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -76,7 +76,7 @@ public class Deck {
         cards.add(new Card(11, "Туза пика"));
         cards.add(new Card(11, "Туза черви"));
 
-        Collections.shuffle(cards); //Возможно будет целесообразно смешивание карт перенести в метод refreshDeck
+        Collections.shuffle(cards);
     }
 
     public Card getRandomCard() {

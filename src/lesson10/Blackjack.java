@@ -1,4 +1,4 @@
-package Lesson10;
+package lesson10;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -70,7 +70,6 @@ public class Blackjack {
             if (player instanceof Dealer) {
                 int points = player.countPoints();
                 if (points >= maxPoints && points <= 21) {
-
                     System.out.println("\nПобедителем стал " + player.getName());
                     break;
                 }

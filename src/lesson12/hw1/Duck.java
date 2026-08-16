@@ -14,23 +14,6 @@ public class Duck {
     }
 
     @Override
-    public String toString() {
-        return "Duck{" +
-                "color='" + color + '\'' +
-                ", weight=" + weight +
-                ", name='" + name + '\'' +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Duck duck = (Duck) o;
-        return weight == duck.weight && Objects.equals(color, duck.color) && Objects.equals(name, duck.name);
-    }
-
-    @Override
     public int hashCode() {
         return Objects.hash(color, weight, name);
     }
@@ -57,5 +40,22 @@ public class Duck {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String toString() {
+        return "Duck{" +
+                "color='" + color + '\'' +
+                ", weight=" + weight +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Duck duck = (Duck) o;
+        return weight == duck.weight && Objects.equals(color, duck.color) && Objects.equals(name, duck.name);
     }
 }
