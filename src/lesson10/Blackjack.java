@@ -87,7 +87,10 @@ public class Blackjack {
             for (Player winner : winners) {
                 System.out.println(winner.getName());
             }
+        } else if (dealer.countPoints() > 21){
+            System.out.println("\nПобедителем стал Диллер");
         }
+
     }
 
 }
