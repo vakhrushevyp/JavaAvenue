@@ -87,8 +87,7 @@ public class Fridge {
 
     public void printAllProductsSortedWeight() {
         HashMap<String, Double> hashMap = new HashMap<>(products);
-        LinkedHashMap<String, Double> linkedHashMap = new LinkedHashMap<>();
-        while (linkedHashMap.size() < products.size()) {
+        while (!hashMap.isEmpty()) {
             Iterator<Map.Entry<String, Double>> iterator = hashMap.entrySet().iterator();
             while (iterator.hasNext()) {
                 double maxWeight = Double.MIN_VALUE;
@@ -99,13 +98,10 @@ public class Fridge {
                 }
                 Map.Entry<String, Double> entry = iterator.next();
                 if (entry.getValue() == maxWeight) {
-                    linkedHashMap.put(entry.getKey(), entry.getValue());
+                    System.out.println(entry.getKey() + ": " + entry.getValue());
                     iterator.remove();
                 }
             }
-        }
-        for (Map.Entry<String, Double> product : linkedHashMap.entrySet()) {
-            System.out.println(product.getKey() + ": " + product.getValue());
         }
     }
 }

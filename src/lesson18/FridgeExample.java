@@ -7,6 +7,7 @@ public class FridgeExample {
         Fridge fridge = new Fridge();
         fridge.putProduct("Творог", 400.0);
         fridge.putProduct("Молоко", 950.0);
+        fridge.putProduct("Компот", 950.0);
         fridge.putProduct("Сок", 1000.0);
         fridge.putProduct("Сок", 500.0);
         fridge.putProduct("Сыр", 50.8);
