@@ -20,6 +20,7 @@ public class FridgeExample {
         System.out.println("\nВзять продукт из холодильника:");
         fridge.getProduct("Мясо", 1100);
         fridge.getProduct("Мясо", 400);
+        fridge.getProduct("Мясо7", 400);
 
         System.out.println("\nВывести вес всех продуктов в холодильнике(сумма)");
         fridge.printProductsWeightSum();

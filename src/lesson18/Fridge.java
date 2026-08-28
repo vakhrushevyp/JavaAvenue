@@ -34,6 +34,8 @@ public class Fridge {
                 products.remove(productName);
                 System.out.println("Вы взяли весь остаток продукта " + productName + " весом " + outProductWeight);
             }
+        } else {
+            System.out.println("Продукта " + productName + " нет в холодильнике");
         }
     }
 
