@@ -48,7 +48,7 @@ public class Main {
                     return o2.getNominal() - o1.getNominal();
                 }
 
-                //Потом сортируем по диаметру по убыванию
+                //Потом сортируем по диаметру по возрастанию
                 return Double.compare(o1.getDiameter(), o2.getDiameter());
             }
         });
