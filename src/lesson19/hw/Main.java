@@ -2,6 +2,7 @@ package lesson19.hw;
 
 import java.util.function.Consumer;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,7 +17,6 @@ public class Main {
                 new Tour("Иран", "Шираз", "Самолет", 80000, 5, 4, "завтрак"),
                 new Tour("Шри-ланка", "Коломбо", "Самолет", 200_000, 10, 5, "все включено")
         };
-
 
         System.out.println("Фильтр туров в Турцию от 150000тыс только с завтраком через Predicate в виде отдельного класса:");
         TourFilterPredicate tourFilterPredicate = new TourFilterPredicate();
@@ -54,10 +54,12 @@ public class Main {
             toursFilterConsumer.accept(tour);
         }
 
+        System.out.println("\nВыведем рандомный тур из массива туров через Supplier в виде отдельного класса");
+        RandomTourSupplier randomTourSupplier = new RandomTourSupplier();
+        System.out.println(randomTourSupplier.get());
 
-
-
-
-
+        System.out.println("\nВыведем рандомный тур из массива туров через Supplier в виде анонимной функции");
+        Supplier<Tour> tourSupplier = () -> tours[(int) (Math.random() * tours.length)];
+        System.out.println(tourSupplier.get());
     }
 }

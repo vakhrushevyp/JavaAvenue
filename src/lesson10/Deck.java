@@ -80,8 +80,8 @@ public class Deck {
     }
 
     public Card getRandomCard() {
-        Card card = cards.getFirst();
-        cards.removeFirst();
+        Card card = cards.get(0);
+        cards.remove(0);
         return card;
     }
 }
