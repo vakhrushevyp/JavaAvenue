@@ -58,7 +58,7 @@ public class Main {
         RandomTourSupplier randomTourSupplier = new RandomTourSupplier();
         System.out.println(randomTourSupplier.get());
 
-        System.out.println("\nВыведем рандомный тур из массива туров через Supplier в виде анонимной функции");
+        System.out.println("\nВыведем рандомный тур через Supplier в виде анонимной функции");
         Supplier<Tour> tourSupplier = () -> tours[(int) (Math.random() * tours.length)];
         System.out.println(tourSupplier.get());
     }
